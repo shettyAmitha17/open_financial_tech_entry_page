@@ -34,13 +34,13 @@ export class EntryPageComponent implements OnInit {
  ]
  public card2Elements = [
   {
-    img: './../../../assets/img/Get Paid Instantly.png',
+    img: './../../../assets/img/freelancer_feature_icon_6@1.5x.png',
     header: 'Ace your business finances',
     subText: 'Manage banking, accounting & everything in between, on one platform',
     value:4
   },
   {
-   img: './../../../assets/img/Low interest rate.png',
+   img: './../../../assets/img/Covid.png',
    header: 'Loans to fight COVID-19',
    subText: 'Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh',
    value:5
