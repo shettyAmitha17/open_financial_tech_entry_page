@@ -1,0 +1,162 @@
+<div class="entry-page-container row">
+            <app-header class="row col-sm-12"></app-header>
+      <div class="row col-sm-12 layout-1">
+            <div class="col-sm-5 first-block">
+                  <div>
+                        <div class="content row">
+                              <div class="offset-sm-3 col-sm-6">
+                                    <div>We make it Super</div>
+                                    <div class="pt-4">Simple</div>
+                                    <div class="pt-4  col-sm-6">
+                                    </div>
+                              </div>
+                              <div class="offset-sm-2 col-sm-6 mt-5">
+                                    <img src="../../../assets/img/collect_img-video.png" alt="collect-img">
+                              </div>
+                              <div class="col-md-8">
+                                    <img src="../../../assets/img/accounting_dots.svg" alt="accounting_dots">
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-sm-7 second-block">
+                  <div>
+                        <div class="form-layout d-flex justify-content-center">
+                              <div class="row col-sm-5 d-flex justify-content-center">
+                                    <div class="text-center my-1 py-2">
+                                          Eligibility Calculator
+                                    </div>
+                                    <div class="row col-sm-10 form-content">
+                                          <div>
+                                                <h5>Monthly Income</h5>
+                                                <div>
+                                                      &#x20b9;{{rangeMonthyInc}}
+                                                </div>
+                                                <div>
+                                                      <mat-slider class="slider-block"
+                                                            (input)="updateSetting($event, 'rangeMonthyInc')" step="5"
+                                                            min="100000" [ngModelOptions]="{standalone: true}"
+                                                            max="300000" [(ngModel)]="rangeMonthyInc"></mat-slider>
+                                                </div>
+
+                                                <div class="row col-sm-12 d-flex justify-content-between">
+                                                      <span>
+                                                            &#x20b9;1,00,000
+                                                      </span>
+                                                      <span>
+                                                            &#x20b9;3,00,000
+                                                      </span>
+                                                </div>
+                                          </div>
+                                          <div>
+                                                <h5>Monthly Expense</h5>
+                                                <div>
+                                                      &#x20b9;{{rangeMonthyExp}}
+                                                </div>
+                                                <div>
+                                                      <mat-slider class="slider-block"
+                                                            (input)="updateSetting($event, 'rangeMonthyExp')" step="5"
+                                                            min="10000" [ngModelOptions]="{standalone: true}"
+                                                            max="50000" [(ngModel)]="rangeMonthyExp"></mat-slider>
+                                                </div>
+                                          </div>
+                                          <div>
+                                                <h5>Repayment Tenure</h5>
+                                                <mat-form-field appearance="standard" class="col-sm-12">
+                                                      <mat-select [formControl]="repayMentControl">
+                                                            <mat-option value="6">6 Months</mat-option>
+                                                            <mat-option value="9">9 Months</mat-option>
+                                                            <mat-option value="12">12 Months</mat-option>
+                                                      </mat-select>
+                                                </mat-form-field>
+                                          </div>
+                                          <div class="col-sm-12 d-flex justify-content-between">
+                                                <h5>Do you have any existing loans</h5>
+                                                <mat-slide-toggle></mat-slide-toggle>
+                                          </div>
+                                          <div>
+                                                <h5>EMI of existing loan (optional)</h5>
+                                                <mat-form-field class="col-sm-12">
+                                                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                                      <span matPrefix>&#x20b9;</span>
+                                                      <input matInput value="15,000">
+                                                </mat-form-field>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-sm-3 d-flex justify-content-center align-items-center">
+                                    <div>
+                                          <div class="col-sm-12 ">
+                                                <h5>Loan Amount</h5>
+                                                <b>
+                                                      &#x20b9;1,00,000
+                                                </b>
+                                          </div>
+                                          <div class="col-sm-12">
+                                                <h5>Your EMI will be</h5>
+                                                <b>
+                                                      &#x20b9;15,000
+                                                </b>
+                                          </div>
+                                          <button type="button">
+                                                Get Started
+                                          </button>
+                                    </div>
+
+                              </div>
+                        </div>
+                  </div>
+                  <div class="dots-img-layout">
+                  </div>
+            </div>
+      </div>
+
+
+      <div class="row col-sm-12 layout-2">
+            <div class="col-sm-12 first-block d-flex justify-content-center">
+                  <div class="col-sm-10 d-flex justify-content-center">
+                        <div class="col-sm-3 first-card-layout">
+                              <div class="row col-sm-11 card-block"  *ngFor="let card1Item of card1Elements" (click)="updateCardActive(card1Item.value)" [class.active]="card1Item.value === cardActiveVal">
+                                    <div class="col-sm-12">
+                                          <img src={{card1Item.img}} alt={{card1Item.header}}>
+                                    </div>
+                                    <h5 class="mt-2">
+                                          {{card1Item.header}}
+                                    </h5>
+                                    <div>
+                                          {{card1Item.subText}}
+                                    </div>
+                              </div>
+                        
+                        </div>
+                        <div class="col-sm-3 second-card-layout">
+                              <div class="row col-sm-11 card-block"  *ngFor="let card1Item of card2Elements" (click)="updateCardActive(card1Item.value)" [class.active]="card1Item.value === cardActiveVal">
+                                    <div class="col-sm-12">
+                                          <img src={{card1Item.img}} alt={{card1Item.header}}>
+                                    </div>
+                                    <h5 class="mt-2">
+                                          {{card1Item.header}}
+                                    </h5>
+                                    <div>
+                                          {{card1Item.subText}}
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center">
+                              <div class="offset-sm-2 col-sm-8 content-display-block">
+                                    <div>Boost your business</div>
+                                    <div class="pt-3">with Open</div>
+                                    <div class="col-sm-5 pt-5"></div>
+                                    <div class="col-sm-7 pt-4">
+                                          Get your hands on a term loan that’s crafted for your business
+                                    </div>
+                                    <button type="button">
+                                          Get an Open Account
+                                    </button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+</div>
