@@ -1,0 +1,2 @@
+# open_financial_tech_entry_page
+open_financial_tech_entry_page entry page assignment with framework angular 10
