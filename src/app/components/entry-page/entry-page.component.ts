@@ -9,7 +9,7 @@ import {FormControl} from '@angular/forms';
 export class EntryPageComponent implements OnInit {
  public rangeMonthyInc: number = 150000;
  public rangeMonthyExp: number = 20000;
- public cardActiveVal: number = 1;
+ public cardActiveVal: number = 4;
  public repayMentControl = new FormControl('6');
 
  public card1Elements = [

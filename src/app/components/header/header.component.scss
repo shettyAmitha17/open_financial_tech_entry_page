@@ -11,7 +11,7 @@ header {
     >div:first-child {
         @extend .cursor-pointer;
         div:nth-child(-n+3){
-            @include text-elements($clrBlack, 16px);
+            @include text-elements($textClrPrimary, 16px);
         }
         div:nth-child(-n+3):hover{
             @include text-elements($clrPrimary, 16px);

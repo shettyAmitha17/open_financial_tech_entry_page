@@ -21,10 +21,10 @@
           position: relative;
 
           >div:first-child {
-            @include text-elements($clrBlack, 30px);
+            @include text-elements($textClrPrimary, 30px);
 
             >div:last-child {
-              border-bottom: 5px solid $clrBlack;
+              border-bottom: 5px solid $textClrPrimary;
             }
           }
 
@@ -65,7 +65,7 @@
             >div:first-child {
               @include bg-clr(#66339914);
               @include border-radius(6px, 6px, 0, 0);
-              @include text-elements($clrBlack, 16px);
+              @include text-elements($textClrPrimary, 16px);
               width: 98%;
             }
 
@@ -79,7 +79,7 @@
 
               >div:nth-child(-n+2) {
                 >div:nth-child(2) {
-                  @include text-elements($clrBlack, 16px);
+                  @include text-elements($textClrPrimary, 16px);
                 }
 
                 >div:nth-child(3) {
@@ -95,7 +95,7 @@
                 }
 
                 >div:nth-child(4) {
-                  @include text-elements($clrBlack, 10px);
+                  @include text-elements($textClrPrimary, 10px);
                 }
               }
 
@@ -138,6 +138,7 @@
                 padding: 10px 20px;
                 @include text-elements($clrPrimary, 14px);
               }
+
               button:hover {
                 @include bg-clr(#4d1a80);
                 @include text-elements($clrWhite, 14px);
@@ -183,7 +184,7 @@
         margin-bottom: 50px;
 
         >div:last-child {
-          @include text-elements(#999999, 10px);
+          @include text-elements($textClrSecondary, 10px);
         }
 
       }
@@ -196,20 +197,28 @@
           @include text-elements($clrWhite, 10px);
         }
       }
+
       .active {
-           @extend .card-active;
+        @extend .card-active;
       }
 
       .card-block:hover {
         @extend .card-active
       }
+
       .content-display-block {
         >div:nth-child(-n+2) {
           font-size: 30px;
         }
+
         >div:nth-child(3) {
           border-bottom: 5px solid #777777;
         }
+
+        >div:nth-child(4) {
+          @include text-elements($textClrSecondary, 14px);
+        }
+
         button {
           margin-top: 6em;
           @include border-single-radius(24px);
@@ -219,6 +228,7 @@
           background: none;
           border: 1px solid $clrPrimary;
         }
+
         button:hover {
           @include text-elements($clrWhite, 14px);
           @include bg-clr($clrPrimary);
