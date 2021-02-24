@@ -1,5 +1,5 @@
 <div class="entry-page-container row">
-            <app-header class="row col-sm-12"></app-header>
+      <app-header class="row col-sm-12"></app-header>
       <div class="row col-sm-12 layout-1">
             <div class="col-sm-5 first-block">
                   <div>
@@ -116,7 +116,9 @@
             <div class="col-sm-12 first-block d-flex justify-content-center">
                   <div class="col-sm-10 d-flex justify-content-center">
                         <div class="col-sm-3 first-card-layout">
-                              <div class="row col-sm-11 card-block"  *ngFor="let card1Item of card1Elements" (click)="updateCardActive(card1Item.value)" [class.active]="card1Item.value === cardActiveVal">
+                              <div class="row col-sm-11 card-block" *ngFor="let card1Item of card1Elements"
+                                    (click)="updateCardActive(card1Item.value)"
+                                    [class.active]="card1Item.value === cardActiveVal">
                                     <div class="col-sm-12">
                                           <img src={{card1Item.img}} alt={{card1Item.header}}>
                                     </div>
@@ -127,10 +129,12 @@
                                           {{card1Item.subText}}
                                     </div>
                               </div>
-                        
+
                         </div>
                         <div class="col-sm-3 second-card-layout">
-                              <div class="row col-sm-11 card-block"  *ngFor="let card1Item of card2Elements" (click)="updateCardActive(card1Item.value)" [class.active]="card1Item.value === cardActiveVal">
+                              <div class="row col-sm-11 card-block" *ngFor="let card1Item of card2Elements"
+                                    (click)="updateCardActive(card1Item.value)"
+                                    [class.active]="card1Item.value === cardActiveVal">
                                     <div class="col-sm-12">
                                           <img src={{card1Item.img}} alt={{card1Item.header}}>
                                     </div>

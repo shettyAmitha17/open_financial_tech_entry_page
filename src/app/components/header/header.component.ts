@@ -7,16 +7,16 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public headerElements = ['Products', 'Solutions', ' Pricing'];
-  public isScrolled:boolean = false;
+  public isScrolled: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
-    }
-
-
-    @HostListener("window:scroll")
-    scrollEvent() {
-        window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
-    }
-
   }
+
+
+  @HostListener("window:scroll")
+  scrollEvent() {
+    window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
+  }
+
+}
