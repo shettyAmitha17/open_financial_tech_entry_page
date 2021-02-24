@@ -1,0 +1,229 @@
+@import '../../utils/styles/custom-palette';
+
+.entry-page-container {
+
+  // first column
+  .layout-1 {
+    .first-block {
+
+      top: 10em;
+
+      >div:first-child {
+        background-image: url("../../../assets/img/blob-small.svg");
+        transition: all 0.5s;
+        @extend %backrgound-elements;
+        background-size: contain;
+        height: 400px;
+        background-position: left -110px bottom;
+
+        .content {
+          padding-top: 4em;
+          position: relative;
+
+          >div:first-child {
+            @include text-elements($clrBlack, 30px);
+
+            >div:last-child {
+              border-bottom: 5px solid $clrBlack;
+            }
+          }
+
+          >div:nth-child(2) {
+            z-index: 9999;
+
+            img {
+              width: 450px;
+            }
+          }
+
+          >div:last-child {
+            left: 18em;
+            top: -30px;
+          }
+        }
+      }
+    }
+
+    // second column
+    .second-block {
+      >div:first-child {
+        transition: all 0.5s;
+        background-image: url("../../../assets/img/circle.png");
+        @extend %backrgound-elements;
+        width: 100%;
+        height: 700px;
+        background-position: right -70px bottom;
+
+        .form-layout {
+          padding-top: 13em;
+
+          >div:first-child {
+            margin-left: 6em;
+            @include bg-clr($clrWhite);
+            @include border-single-radius(10px);
+
+            >div:first-child {
+              @include bg-clr(#66339914);
+              @include border-radius(6px, 6px, 0, 0);
+              @include text-elements($clrBlack, 16px);
+              width: 98%;
+            }
+
+            .form-content {
+              margin-bottom: 30px;
+
+              >div {
+                width: 100%;
+                margin-top: 30px;
+              }
+
+              >div:nth-child(-n+2) {
+                >div:nth-child(2) {
+                  @include text-elements($clrBlack, 16px);
+                }
+
+                >div:nth-child(3) {
+                  margin-top: -6px;
+
+                  mat-slider {
+                    width: 100%;
+                  }
+
+                  .mat-slider-horizontal {
+                    height: 30px !important;
+                  }
+                }
+
+                >div:nth-child(4) {
+                  @include text-elements($clrBlack, 10px);
+                }
+              }
+
+              >div:nth-child(3) {
+                mat-form-field {
+                  margin-top: -20px;
+                }
+              }
+
+              >div:last-child {
+                mat-form-field {
+                  margin-top: -12px;
+                }
+              }
+
+            }
+          }
+
+
+          // second child div
+          >div:nth-child(2) {
+            @include bg-clr($clrPrimary);
+            @include text-elements($clrWhite, '');
+            margin: 6em 0 6em 5px;
+            border-radius: 0 10px 10px 0;
+
+            >div {
+              >div {
+                @extend .text-center;
+                margin-bottom: 30px;
+
+                b {
+                  font-size: 16px;
+                }
+              }
+
+              button {
+                @include border-single-radius(24px);
+                @include bg-clr($clrWhite);
+                padding: 10px 20px;
+                @include text-elements($clrPrimary, 14px);
+              }
+              button:hover {
+                @include bg-clr(#4d1a80);
+                @include text-elements($clrWhite, 14px);
+              }
+            }
+
+          }
+
+          h5 {
+            margin: 0;
+          }
+        }
+      }
+
+      .dots-img-layout {
+        transition: all 0.5s;
+        background-image: url("../../../assets/img/accounting_dots.svg");
+        background-repeat: no-repeat;
+        background-position: right 28px bottom 49px;
+        height: 120px;
+      }
+
+    }
+  }
+
+  .layout-2 {
+    .first-block {
+      background-image: url("../../../assets/img/sol_wave_bg.svg");
+      transition: all 0.5s;
+      @extend %backrgound-elements;
+      height: 700px;
+
+      .second-card-layout {
+        margin-top: 8em;
+      }
+
+      .card-block {
+        @include bg-clr($clrWhite);
+        @extend .cursor-pointer;
+        @include border-single-radius(20px);
+        padding: 20px;
+        box-shadow: 0px 0px 30px #2321321F;
+        margin-bottom: 50px;
+
+        >div:last-child {
+          @include text-elements(#999999, 10px);
+        }
+
+      }
+
+      .card-active {
+        @include bg-clr(#9f62c96b);
+        color: $clrWhite;
+
+        >div:last-child {
+          @include text-elements($clrWhite, 10px);
+        }
+      }
+      .active {
+           @extend .card-active;
+      }
+
+      .card-block:hover {
+        @extend .card-active
+      }
+      .content-display-block {
+        >div:nth-child(-n+2) {
+          font-size: 30px;
+        }
+        >div:nth-child(3) {
+          border-bottom: 5px solid #777777;
+        }
+        button {
+          margin-top: 6em;
+          @include border-single-radius(24px);
+          padding: 10px 20px;
+          @include text-elements($clrPrimary, 14px);
+          width: 60%;
+          background: none;
+          border: 1px solid $clrPrimary;
+        }
+        button:hover {
+          @include text-elements($clrWhite, 14px);
+          @include bg-clr($clrPrimary);
+        }
+      }
+    }
+  }
+}

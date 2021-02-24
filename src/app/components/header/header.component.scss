@@ -1,0 +1,48 @@
+
+@import '../../utils/styles/custom-palette';
+
+header {
+    position: fixed;
+    z-index: 999999;
+    img{
+        height: 70px
+    }
+    >div:nth-child(2) {
+    >div:first-child {
+        @extend .cursor-pointer;
+        div:nth-child(-n+3){
+            @include text-elements($clrBlack, 16px);
+        }
+        div:nth-child(-n+3):hover{
+            @include text-elements($clrPrimary, 16px);
+        }
+        button {
+            @include border-single-radius(24px);
+            @include box-shadows(0px, 0px, 20px,  0px, $shadowClr);
+            padding: 8px;
+        }
+        button:first-child {
+            width:38%;
+            border: 2px solid $clrPrimary;
+            @include text-elements($clrPrimary, 12px);
+        }
+        button:nth-child(2) {
+            width: 56%;
+            background-image: linear-gradient(to right, $clrSecondary,$clrPrimary);
+            @include text-elements($clrWhite, 12px);
+        }
+        button:hover {
+            @include text-elements($clrWhite, 12px);
+            background-image: linear-gradient(to right, $clrPrimary,$clrPrimary);
+        }
+    }
+
+    }
+}
+header.scrolled {
+    @include bg-clr($clrWhite !important);
+    transition: background-color 100ms linear;
+    box-shadow: 0px 0px 30px #2321321F;
+    z-index: 999999;
+  }
+  
